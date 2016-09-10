@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 #if UNITY
 using UnityEngine;
@@ -257,7 +258,11 @@ namespace Foundation.Architecture
 
         bool CanRefresh
         {
+#if CORE
+            get { return typeof(T).GetTypeInfo().IsSubclassOf(typeof(IObservable<PropertyEvent>)); }
+#else
             get { return typeof(T).IsAssignableFrom(typeof(IObservable<PropertyEvent>)); }
+#endif
         }
 
         void BindRefresh(IObservable<PropertyEvent> model)
@@ -277,7 +282,7 @@ namespace Foundation.Architecture
             Publish(ListChangedEventType.Refresh, args.Sender);
         }
 
-        #endregion
+#endregion
 
     }
 }

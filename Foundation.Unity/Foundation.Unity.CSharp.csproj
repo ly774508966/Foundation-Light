@@ -72,9 +72,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Binding\BindingComponenet.cs" />
-    <Compile Include="Assets\Binding\IViewTarget.cs" />
-    <Compile Include="Assets\Binding\View.cs" />
+    <Compile Include="Assets\MVVM\Binding.cs" />
+    <Compile Include="Assets\MVVM\BindingComponenet.cs" />
+    <Compile Include="Assets\MVVM\Controls\ButtonControl.cs" />
+    <Compile Include="Assets\MVVM\View.cs" />
     <Compile Include="Assets\Tests\Assert.cs" />
     <Compile Include="Assets\Tests\BufferHelperTests.cs" />
     <Compile Include="Assets\Tests\DemoTest.cs" />
