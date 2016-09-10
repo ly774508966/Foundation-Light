@@ -122,7 +122,17 @@ namespace MVVM
 
         public void Subscribe<T>(Action<T> Handler)
         {
-            
+
+        }
+
+        public void Post(string memberName, object value = null)
+        {
+
+        }
+
+        public T Get<T>(string memberName)
+        {
+            return default(T);
         }
 
     }

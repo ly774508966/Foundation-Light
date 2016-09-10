@@ -32,6 +32,7 @@ public class ButtonControl : MonoBehaviour
             else
             {
                 // We are bound !
+                // MemberBindings should now be fireing
             }
         });
         
@@ -43,7 +44,6 @@ public class ButtonControl : MonoBehaviour
         Enabled.Subscribe<bool>(e =>
         {
             _uiElement.enabled = e;
-
         });
 
         Label.Subscribe<string>(e =>
